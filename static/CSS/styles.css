@@ -40,7 +40,9 @@ body {
 }
 
 .header {
-  
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 90%;
   background-color: var(--black-1);
   height: 3.5em;
@@ -127,7 +129,10 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 760px){
+
+/* --------------------- Perfil ---------------------*/
+
+@media screen and (max-width: 800px){
   .main {
     padding-top: 3.5em;
     padding-bottom: 5.5em;
@@ -140,10 +145,6 @@ body {
     margin-right: 3%;
   }
 
-  .perfil__contact_list {
-    text-align: center;
-  }
-
 }
 
 .perfil, .content{
@@ -152,7 +153,6 @@ body {
   border-radius: 10px;
 }
 
-/* --------------------- Sidenav ---------------------*/
 .perfil {
   margin-top: 3%;
   margin-left: 3%;
@@ -179,6 +179,7 @@ body {
 }
 
 .perfil__contact_list {
+  text-align: center;
   list-style: none;
   padding: 0;
 }
@@ -196,6 +197,10 @@ body {
   z-index: 0;
 }
 
+.content__about_me p {
+  text-align: justify;
+}
+
 /* --------------------- Footer ---------------------*/
 
 .footer {
@@ -203,9 +208,43 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 40px;
-  width: 100%;
+  height: 3em;
+  width: 96%;
+  padding: 0 2%;
   z-index: 1;
   box-shadow: 1px -1px 4px var(--green-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.footer__framework_icons {
+  align-items: center;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.footer__framework_icons img {
+  width: 1.1em;
+}
+
+@media screen and (max-width: 480px){
+  .footer {
+    display: block;
+    text-align: center;
+  }
+  
+  .footer__right {
+    padding: 1em 0;
+  }
+
+  .footer__framework_icons {
+    display: none;
+  }
+  
+}
