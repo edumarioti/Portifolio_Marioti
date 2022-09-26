@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'CSS/styles.css'%} ">
+    
+    <link rel="icon" type="image/x-icon" href="{% static './img/favicon.ico' %}">
+
+    <title>Eduardo Marioti</title>
+</head>
+
+<body>
+    {% include 'partials/_header.html' %}
+
+    <main onclick="close_sidebar()" class="main" id="main">
+    {% block content %}
+    
+    {% endblock content %}
+    </main>
+
+    {% include 'partials/_footer.html' %}
+    
+    <script>
+        var header = document.getElementById('header')
+        var sidebar = document.getElementById('sidebar')
+        var main = document.getElementById('main')
+        var show_sidebar = false
+    
+        function toggle_sidebar(){
+    
+            show_sidebar = !show_sidebar;
+    
+            if(show_sidebar)
+            {
+                sidebar.style.marginLeft = '0vw';
+                sidebar.style.animationName = 'show_side_bar';
+                main.style.filter = 'blur(2px)';
+    
+            }
+            else
+            {
+                sidebar.style.marginLeft = '-100vw';
+                sidebar.style.animationName = 'close_side_bar';
+                main.style.filter = '';
+            }
+        }
+    
+        function close_sidebar(){
+            if(show_sidebar)
+            {
+                show_sidebar = true;
+                toggle_sidebar();
+            }
+        }
+    
+        window.addEventListener('resize', function(event) {
+            if(window.innerWidth > 660 && show_sidebar) 
+            {  
+                show_sidebar = true;
+                toggle_sidebar();
+            }
+        });
+    
+    </script>
+</body>
+
+</html>
