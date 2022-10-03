@@ -1,20 +1,26 @@
 {% load static %}
 
     <header class="header" id="header">
+
+        <div class="header__links" id="header__links">
+            <a href="#hello">Olá</a>
+            <a href="#projects">Projetos</a>
+            <a href="#hard_skills">Hard Skills</a>
+            <a href="#soft_skills">Soft Skills</a>
+            <a href="#courses">Cursos</a>
+            <a href="#experiences">Experiências</a>
+        </div>
+
         <button onclick="toggle_sidebar()" class="header__btn_menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
         </button>
+
         <div class="header__logo">
-            <img src="{% static '\img\logo.png' %}" class="header__logo_picture" alt="">
-        </div>
-        <div class="header__links" id="header__links">
-            <a href="#">Sobre Mim</a>
-            <a href="#">Habilidades</a>
-            <a href="#">Projetos</a>
-            <a href="#">Cursos</a>
-            <a href="#">Experiências</a>
+            <a href="#">
+                <img src="{% static '\img\logo.png' %}" class="header__logo_picture" alt="">
+            </a>
         </div>
     </header>
 
@@ -24,11 +30,12 @@
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
               </svg>
         </button>
-        <a href="#">Sobre Mim</a>
-        <a href="#">Habilidades</a>
-        <a href="#">Projetos</a>
-        <a href="#">Cursos</a>
-        <a href="#">Experiências</a>
+        <a onclick="toggle_sidebar()" href="#hello">Olá</a>
+        <a onclick="toggle_sidebar()" href="#projects">Projetos</a>
+        <a onclick="toggle_sidebar()" href="#hard_skills">Hard Skills</a>
+        <a onclick="toggle_sidebar()" href="#soft_skills">Soft Skills</a>
+        <a onclick="toggle_sidebar()" href="#courses">Cursos</a>
+        <a onclick="toggle_sidebar()" href="#experiences">Experiências</a>
     </div>
 
     
