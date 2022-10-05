@@ -8,11 +8,12 @@
   --green-1: #0fc2c0;
   --green-2: #023535;
 
-  --font-monospace: 16px "Lucida Console";
-  --font-regular: 14px  Verdana;
+  --font-emphasis: 16px "Constantia";
+  --font-regular: 16px  "Lucida Sans";
   --font-white: #dbdbdb;
   --font-black: #313133;
   --font-green: #0fc2c0;
+  --font-gray: #8d8d8d;
 }
 
 html, body {
@@ -63,6 +64,7 @@ body {
   font-weight: bold;
 
 }
+
 .header__links a:hover, .sidebar a:hover  {
   color: var(--green-1);
 }
@@ -70,13 +72,9 @@ body {
 :target {
   scroll-margin-top: 4em;
 }
+
 :target h1 {
   color: var(--font-green);
-}
-
-.bi-x:hover, .bi-list:hover{
-  transition: 0.4s;
-  color: var(--green-1);
 }
 
 .header__logo_picture {
@@ -107,6 +105,12 @@ body {
   z-index: 10;
 }
 
+.side_bar__button:hover{
+  transition: 0.4s;
+  color: var(--green-1);
+}
+
+
 @media screen and (max-width: 780px){
   .header__btn_menu {
     display: block;
@@ -132,8 +136,9 @@ body {
 /* --------------------- Main ---------------------*/
 .main {
   padding-top: 3.5em;
-  padding-bottom: 5.5em;
+  padding-bottom: 10em;
   max-width: 1100px;
+  margin-bottom: 3%;
 }
 
 .content_div {
@@ -148,8 +153,12 @@ body {
   text-align: justify;
 }
 
-.content_div h1 {
+.content_div__titles {
+  font: bold var(--font-emphasis);
+  font-size: 36px;
+  font-variant: small-caps;
   color: var(--font-green);
+  border-bottom: 1px solid var(--gray-1);
 }
 
 /* --------------------- Perfil ---------------------*/
@@ -158,9 +167,12 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
+
 }
 
 .perfil__images {
+  margin: 0;
+  padding: 0;
   border-radius: 10px 0 0 10px;
   width: 50%;
   min-width: 50%;
@@ -179,8 +191,6 @@ body {
 }
 
 .perfil__picture img{
-  padding: 0;
-  margin: 0;
   width: 100%;
   max-width: 400px;
   max-height: 400px;
@@ -192,36 +202,39 @@ body {
   border-radius: 50%;
 }
 
-.perfil__name, .perfil__attributes {
-  text-align: center;
-}
-
-.perfil__name {
-  font: var(--font-monospace);
-  font-size: 28px;
-  color: var(--font-green);
-  font-variant: small-caps;
-
-}
 .perfil__info {
   display: block;
   width: 50%;
-  padding: 5%;
+  padding: 2%;
+}
+
+.perfil__name, .perfil__attributes {
+  text-align: center;
+  font: var(--font-emphasis);
+}
+
+.perfil__name {
+  padding: 10px 0;
+  font-size: 42px;
+  color: var(--font-green);
+  font-variant: small-caps;
+}
+
+.perfil__attributes {
+  font-size: 20px;
+  padding: 10px 0;
 }
 
 .perfil__contact_list {
   display: flex;
   justify-content: center;
+  color: var(--font-gray);
 }
 
 .perfil__contact_list ul{
   justify-content: center;
   list-style: none;
   padding: 0;
-}
-
-.perfil__contact_list ul li {
-  padding-bottom: 5px;
 }
 
 .perfil__contact_list a{
@@ -261,15 +274,51 @@ body {
 
 }
 
-
+/* --------------------- Hello ---------------------*/
 .hello b {
   font-size: 30px;
   color: var(--font-green);
 }
 
+/* --------------------- Hard Skills ---------------------*/
 
+.hard_skills_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hard_skills_item {
+
+  border-radius: 10px;
+  margin: 2%;
+  padding: 3%;
+  text-align: center;
+}
+
+.hard_skills_icon img{
+
+  width: 100px;
+  height: 100px;
+}
+
+.hard_skills_name {
+  font: var(--font-emphasis);
+  font-size: 20px;
+}
+
+.hard_skills_level {
+  color: var(--font-gray);
+}
+/* --------------------- Courses ---------------------*/
 .courses ul{
-  list-style: square;
+  list-style: none;
+  padding-left: 0;
+}
+
+.courses ul li {
+  padding: 2em;
+  border-bottom: 1px solid var(--gray-1);
 }
 
 .courses b {
@@ -277,11 +326,11 @@ body {
 }
 
 .courses a {
-  color: var(--font-green);
+  color: var(--font-gray);
 }
 
 .course__title {
-  font: bold var(--font-monospace);
+  font: bold var(--font-emphasis);
   font-variant: small-caps;
   font-size: 24px;
   color: var(--font-green);
@@ -289,12 +338,9 @@ body {
 }
 
 .course__institution {
+  color: var(--font-gray);
   font: var(--font-regular);
   font-size: 16px;
-}
-
-.course__description, .course__hard_skills {
-  padding-left: 2em;
 }
 
 /* --------------------- Footer ---------------------*/
@@ -308,7 +354,7 @@ body {
   width: 96%;
   padding: 0 2%;
   z-index: 1;
-  box-shadow: 1px -1px 4px var(--green-1);
+  box-shadow: 0px 0px 4px var(--green-1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
