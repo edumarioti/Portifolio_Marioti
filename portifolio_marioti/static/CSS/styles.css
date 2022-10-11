@@ -280,6 +280,66 @@ body {
   color: var(--font-green);
 }
 
+/* --------------------- Projects ---------------------*/
+.projects__contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project {
+  border: 2px solid var(--black-1);
+  border-radius: 10px;
+  max-width: 200px;
+  margin: 10px;
+  background-color: var(--black-2);
+}
+
+.project:hover {
+  border: 2px solid var(--green-1);
+  box-shadow: 0px 0px 15px var(--green-1);
+
+}
+
+.project a {
+  color: var(--font-white);
+  text-decoration: none;
+}
+
+.project__image img {
+  border-radius: 10px 10px 0 0;
+  width: 200px;
+  height: 200px;
+}
+
+.project__info {
+  padding: 10px;
+  text-align: center;
+}
+
+.project__title {
+  padding-bottom: 5px;
+  font: var(--font-emphasis);
+  font-size: 24px;
+}
+
+.project__subtitle {
+  padding-bottom: 10px;
+  color: var(--font-gray);
+  font-size: 12px;
+}
+
+.project__technologies {
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project__technologies img {
+  width: 25px;
+  height: 25px;
+}
+
 /* --------------------- Hard Skills ---------------------*/
 
 .hard_skills_list {
@@ -297,7 +357,6 @@ body {
 }
 
 .hard_skills_icon img{
-
   width: 100px;
   height: 100px;
 }
