@@ -285,6 +285,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .project {
@@ -301,9 +302,10 @@ body {
 
 }
 
-.project a {
+.project {
   color: var(--font-white);
   text-decoration: none;
+  justify-content: end;
 }
 
 .project__image img {
@@ -313,6 +315,8 @@ body {
 }
 
 .project__info {
+  position: relative;
+  justify-content: space-evenly;
   padding: 10px;
   text-align: center;
 }
