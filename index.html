@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="static/CSS/styles.css">
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
+
+    <title>Eduardo Marioti</title>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+
+        <nav class="header__links" id="header__links">
+            <a href="#perfil">Perfil</a>
+            <a href="#hello">Olá</a>
+            <a href="#projects">Projetos</a>
+            <a href="#hard_skills">Hard Skills</a>
+            <a href="#courses">Cursos</a>
+        </nav>
+
+        <button onclick="toggle_sidebar()" class="header__btn_menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="side_bar__button" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        
+        <a href="#" class="header__logo">
+            <img src="static/img/logo.svg" class="header__logo_picture" alt="">
+        </a>
+        
+    </header>
+
+    <div class="sidebar" id="sidebar">
+
+        <button onclick="toggle_sidebar()" class="header__btn_menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="side_bar__button" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </button>
+
+        <a onclick="toggle_sidebar()" href="#perfil">Perfil</a>
+        <a onclick="toggle_sidebar()" href="#hello">Olá</a>
+        <a onclick="toggle_sidebar()" href="#projects">Projetos</a>
+        <a onclick="toggle_sidebar()" href="#hard_skills">Hard Skills</a>
+        <a onclick="toggle_sidebar()" href="#courses">Cursos</a>
+    </div>
+
+    <main onclick="close_sidebar()" class="main" id="main">
+    
+        <section id="perfil" class="section perfil">
+                
+            <div class="perfil__picture">
+                <img src="static/img/eu.jpg" alt=""> 
+            </div>
+            
+            <div class="perfil__info">
+        
+                <h1 class="perfil__name">Eduardo Marioti Vargas</h1>
+
+                <h2 class="perfil__attributes" >Python | Django | Eng. de Controle e Automação</h2>
+
+                <div class="perfil__contact_list">
+                    <ul>
+                        <li class="perfil__contact_list_item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            </svg>
+                            Telefone: <a href="https://wa.me/5549991388785" target="_blank" rel="external">(49) 9 91388785</a>
+                        </li>
+                        <li class="perfil__contact_list_item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                            </svg>
+                            Email: <a href="mailto:edumarioti@gmail.com" target="_blank" rel="external">edumarioti@gmail.com</a> 
+                        </li>
+                        <li class="perfil__contact_list_item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                            </svg>
+                            Linkedin: <a href="https://www.linkedin.com/in/eduardomarioti/" target="_blank" rel="external">eduardomarioti</a>
+                        </li>
+                        <li class="perfil__contact_list_item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                            Github: <a href="https://github.com/edumarioti" target="_blank" rel="external">@edumarioti</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="hello" class="section hello">
+            <h3 class="section_titles">Olá</h3>
+            <p> Sou um desenvolvedor iniciante, aspirante por tecnologia e com uma sede
+                imensa por conhecimento. Esta página é a versão 1.0 do meu portfólio, estou estudando
+                sobre desenvolvimento web. Em breve mais versões estarão disponíveis, buscando trazer
+                ao máximo cada conhecimento adquirido.
+        </section>
+        
+        <section id="projects" class="section projects">
+            <h3 class="section_titles">Projetos e Estudos</h3>
+        
+            <div class="projects__contents">
+                <a href="https://github.com/edumarioti/AthenaSystem-TCC-2021" target="_blank" rel="external" class="project">
+                    <div class="project__image">
+                        <img src="static/img/projects/AthenaSystem.jpeg" alt="">
+                    </div>
+                    <div class="project__info" >
+                        <h4 class="project__title"> AthenaSystem </h4>
+                        <h5 class="project__subtitle"> Sistema de controle e dispersão de estoque. </h5>
+                        <div class="project__technologies"> 
+                            <img src="static/img/icons/python.svg" alt="logo python">
+                            <img src="static/img/icons/git.svg" alt="logo git">
+                            <img src="static/img/icons/arduino.svg" alt="logo arduino">
+                            <img src="static/img/icons/c++.svg" alt="logo c++">
+                            <img src="static/img/icons/qt.svg" alt="logo qt">
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/edumarioti/classic-snake-game-2021" target="_blank" rel="external" class="project">
+                    <div class="project__image">
+                        <img src="static/img/projects/snake.png" alt="">
+                    </div>
+                    <div class="project__info" >
+                        <h4 class="project__title"> Snake game </h4>
+                        <h5 class="project__subtitle"> O classico game da "cobrinha". bonus a cada 10 pontos! </h5>
+                        <div class="project__technologies"> 
+                            <img src="static/img/icons/python.svg" alt="logo python">
+                            <img src="static/img/icons/git.svg" alt="logo git">
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/edumarioti/App-Mensagens-Sockets-TCP" target="_blank" rel="external" class="project">
+                    <div class="project__image">
+                        <img src="static/img/projects/sockets_tcp.png" alt="">
+                    </div>
+                    <div class="project__info" >
+                        <h4 class="project__title"> Mensagens TCP </h4>
+                        <h5 class="project__subtitle"> Troca de mensagens via sockets e serialização. </h5>
+                        <div class="project__technologies"> 
+                            <img src="static/img/icons/python.svg" alt="logo python">
+                            <img src="static/img/icons/git.svg" alt="logo git">
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="project">
+                    <div class="project__image">
+                        <img src="static/img/projects/alurareceita.png" alt="">
+                    </div>
+                    <div class="project__info" >
+                        <h4 class="project__title"> Alura Receita </h4>
+                        <h5 class="project__subtitle"> Site de compartilhamento de receitas. </h5>
+                        <div class="project__technologies">
+                            <img src="static/img/icons/python.svg" alt="logo python">
+                            <img src="static/img/icons/git.svg" alt="logo git">
+                            <img src="static/img/icons/html.svg" alt="logo html">
+                            <img src="static/img/icons/css.svg" alt="logo css">
+                            <img src="static/img/icons/django.svg" alt="logo django">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <section id="hard_skills" class="section hard_skills">
+            <h3 class="section_titles">Hard Skills</h3>
+            
+            <div class="hard_skills_list">
+                <div class="hard_skills_item">
+                    <img class="hard_skills_icon" src="static/img/icons/python.svg" alt="logo python">
+                    <h4 class="hard_skills_name">Python 3</h4>
+                    <h5 class="hard_skills_level">Júnior/Pleno</h5>
+                </div>
+                <div class="hard_skills_item">
+                    <img class="hard_skills_icon" src="static/img/icons/django.svg" alt="logo django">
+                    <h4 class="hard_skills_name">Django</h4>
+                    <h5 class="hard_skills_level">Júnior</h5>
+                </div>
+                <div class="hard_skills_item">
+                    <img class="hard_skills_icon" src="static/img/icons/html.svg" alt="logo html">
+                    <h4 class="hard_skills_name">HTML</h4>
+                    <h5 class="hard_skills_level">Júnior</h5>
+                </div>
+                <div class="hard_skills_item">
+                    <img class="hard_skills_icon" src="static/img/icons/css.svg" alt="logo css">
+                    <h4 class="hard_skills_name">CSS</h4>
+                    <h5 class="hard_skills_level">Júnior</h5>
+                </div>
+                <div class="hard_skills_item">
+                    <img class="hard_skills_icon" src="static/img/icons/git.svg" alt="logo git">
+                    <h4 class="hard_skills_name">Git</h4>
+                    <h5 class="hard_skills_level">Júnior</h5>
+                </div>
+                <div class="hard_skills_item">
+                    <img  class="hard_skills_icon" src="static/img/icons/github.svg" alt="logo github">
+                    <h4 class="hard_skills_name">Github</h4>
+                    <h5 class="hard_skills_level">Júnior</h5>
+                </div>
+            </div>
+        </section>
+        
+        <section id="courses" class="section courses">
+            <h3 class="section_titles">Cursos</h3>
+            
+            <ul>
+                <li>
+                    <div class="course__title"> Engenharia de Controle e Automação </div>
+                    <div class="course__institution"> Universidade do Contestado - 2017 á 2021 - 
+                        <a href="static/certificates\diploma.pdf" target="_blank" >Ver certificado</a>
+                    </div>
+                    <p class="course__description"> A graduação foi um leque de conhecimentos, tanto para a <b>Automação Industrial</b>
+                        quanto para <b> Programação em Geral</b>, trazendo matérias como: Algoritmos e Estrutura de Dados,
+                        Programação I, Programação II, Sistemas Computacionais, Banco de Dados, Automação Web,
+                        Visão Computacional, Redes de Computadores, Sistemas Embarcados.</p>   
+                </li>
+                <li>
+                    <div class="course__title"> Formação Python - 90h</div>
+                    <div class="course__institution"> Alura - 2020 - 
+                        <a href="https://cursos.alura.com.br/degree/certificate/23dc2140-8569-483b-9030-ddf359ce119a" target="_blank" >Ver certificado</a></div>
+                    <p class="course__description"> Na Formação Python, estudei a versão 3 da linguagem, aplicando <b>Orientação a Objetos</b>
+                         e boas práticas de programação. Aprendi sobre <b>tratamentos de erros</b> e diversas funcionalidades para 
+                         tratar os diferentes tipos de <b>coleções</b>. Também foi visco como ler e escrever diferentes formatos de arquivos usando Python.</p>     
+                </li>
+                <li>
+                    <div class="course__title"> Formação Django - 67h</div>
+                    <div class="course__institution"> Alura - 2022 - 
+                        <a href="https://cursos.alura.com.br/degree/certificate/b70d6964-6842-4098-afdb-565cdcd00c82" target="_blank" >Ver certificado</a>
+                    </div>
+                    <p class="course__description"> Esta formação me mostrou, pelo nível de abstração do framework, o quão pode ser mais fácil e organizado a 
+                        administração e implementação de um site com backend e frontend. Aprendi sobre o padrão <b>MVC</b>, 
+                        separação de <b>Rotas</b>, trabalhos com arquivos estáticos, e como manipular o banco de dados utilizando <b>models</b>.
+                        </p>     
+                </li>
+                <li>
+                    <div class="course__title"> Redes de Computadores - 41h</div>
+                    <div class="course__institution"> Alura - 2022 
+                        <a href="https://cursos.alura.com.br/degree/certificate/7c20c3ec-9506-4e1d-b343-77caa7c9cc39" target="_blank" >Ver certificado</a>
+                    </div>
+                    <p class="course__description"> 
+                        Um curso que trouxe configurações completas na rede, dês da rede mais simples entre dois computadores, 
+                        até uma rede complexa com Vlans, Acess List, Roteamento para a rede pública, DHCP, DNS e protocolos entre servidores.
+                </p>     
+                </li>
+            </ul>
+        </section>
+    
+        <br>
+        <br>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__framework_icons">
+                <img src="static/img/icons/python.svg" alt="logo python">
+                <img src="static/img/icons/django.svg" alt="logo django">
+                <img src="static/img/icons/html.svg" alt="logo html">
+                <img src="static/img/icons/css.svg" alt="logo css">
+            </div>
+    
+        <div class="footer__right">
+            Eduardo Marioti Vargas | v1.0 | @2022
+        </div>
+    </footer>
+    
+    <script>
+        var header = document.getElementById('header')
+        var sidebar = document.getElementById('sidebar')
+        var main = document.getElementById('main')
+        var show_sidebar = false
+    
+        function toggle_sidebar(){
+    
+            show_sidebar = !show_sidebar;
+    
+            if(show_sidebar)
+            {
+                sidebar.style.left = '0vw';
+                sidebar.style.animationName = 'show_side_bar';
+                main.style.filter = 'blur(2px)';
+    
+            }
+            else
+            {
+                sidebar.style.left = '-100vw';
+                sidebar.style.animationName = 'close_side_bar';
+                main.style.filter = '';
+            }
+        }
+    
+        function close_sidebar(){
+            if(show_sidebar)
+            {
+                show_sidebar = true;
+                toggle_sidebar();
+            }
+        }
+    
+        window.addEventListener('resize', function(event) {
+            if(window.innerWidth > 660 && show_sidebar) 
+            {  
+                show_sidebar = true;
+                toggle_sidebar();
+            }
+        });
+    
+    </script>
+</body>
+
+</html>

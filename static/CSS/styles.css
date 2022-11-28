@@ -141,7 +141,7 @@ body {
   margin-bottom: 3%;
 }
 
-.content_div {
+.section {
   padding: 3%;
   margin: 2.5% 5%;
   background-color: var(--black-1);
@@ -149,11 +149,11 @@ body {
   box-shadow: 0px 0px 4px var(--green-2);
 }
 
-.content_div p {
+.section p {
   text-align: justify;
 }
 
-.content_div__titles {
+.section_titles {
   font: bold var(--font-emphasis);
   font-size: 36px;
   font-variant: small-caps;
@@ -167,27 +167,18 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
-
 }
 
-.perfil__images {
-  margin: 0;
-  padding: 0;
-  border-radius: 10px 0 0 10px;
-  width: 50%;
-  min-width: 50%;
-  max-width: 50%;
+.perfil__picture {
   min-height: 100%;
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  border-radius: 10px 0 0 10px;
   background-image: url('../img/background.jpg');
   background-position: center; 
   background-repeat: no-repeat;
   background-size: cover; 
-}
-
-.perfil__picture {
-  display: flex;
-  padding: 5%;
-  justify-content: center;
 }
 
 .perfil__picture img{
@@ -210,18 +201,17 @@ body {
 
 .perfil__name, .perfil__attributes {
   text-align: center;
-  font: var(--font-emphasis);
 }
 
 .perfil__name {
   padding: 10px 0;
-  font-size: 42px;
+  font-size: 48px;
   color: var(--font-green);
   font-variant: small-caps;
 }
 
 .perfil__attributes {
-  font-size: 20px;
+  font-size: 14px;
   padding: 10px 0;
 }
 
@@ -229,6 +219,7 @@ body {
   display: flex;
   justify-content: center;
   color: var(--font-gray);
+  margin: 0 auto;
 }
 
 .perfil__contact_list ul{
@@ -239,7 +230,14 @@ body {
 
 .perfil__contact_list a{
   color: var(--font-green);
+  transition: 500ms;
 }
+
+.perfil__contact_list a:hover{
+  background-color: var(--font-black);
+
+}
+
 
 @media screen and (max-width: 800px){
   .content_div {
@@ -360,7 +358,7 @@ body {
   text-align: center;
 }
 
-.hard_skills_icon img{
+.hard_skills_icon{
   width: 100px;
   height: 100px;
 }
