@@ -1,21 +1,3 @@
-:root{
-  --white-1: #EEEEEE;
-  --white-2: #d4d4d4;
-  --gray-1: #8d8d8d;
-  --gray-2: #333333;
-  --black-1: #1C1C1C;
-  --black-2: #000000;
-  --green-1: #0fc2c0;
-  --green-2: #023535;
-
-  --font-emphasis: 16px "Constantia";
-  --font-regular: 16px  "Lucida Sans";
-  --font-white: #dbdbdb;
-  --font-black: #313133;
-  --font-green: #0fc2c0;
-  --font-gray: #8d8d8d;
-}
-
 
 /* --------------------- Header ---------------------*/
 
@@ -102,14 +84,13 @@
 /* --------------------- Main ---------------------*/
 .main {
   padding-top: 3.5em;
-  padding-bottom: 10em;
+  padding-bottom: 3.5em;
   max-width: 1100px;
-  margin-bottom: 3%;
 }
 
 .section {
   padding: 3%;
-  margin: 2.5% 5%;
+  margin: 2.5% auto;
   background-color: var(--black-1);
   border-radius: 10px;
   box-shadow: 0px 0px 4px var(--green-2);
@@ -374,10 +355,12 @@
 
 .footer {
   background-color: var(--black-1);
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0px;
   height: 3em;
   width: 100%;
   padding: 0 2%;
-  z-index: 1;
   box-shadow: 0px 0px 4px var(--green-1);
   display: flex;
   flex-direction: row;
@@ -387,12 +370,10 @@
 
 .footer__framework_icons {
   align-items: center;
-  padding: 0;
   display: flex;
   flex-direction: row;
   gap: 30%;
   margin: 2% 0;
-  z-index: 1;
 }
 
 .footer__framework_icons img {

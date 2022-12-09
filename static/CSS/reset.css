@@ -23,6 +23,9 @@ body {
     scroll-behavior: smooth;
     font: var(--font-regular);
     color: var(--font-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
