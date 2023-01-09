@@ -298,7 +298,6 @@
 }
 
 .hard_skills_item {
-
   border-radius: 10px;
   margin: 2%;
   padding: 3%;
@@ -327,6 +326,7 @@
 .courses ul li {
   padding: 2em;
   border-bottom: 1px solid var(--gray-1);
+  display: flex;
 }
 
 .courses b {
@@ -335,6 +335,16 @@
 
 .courses a {
   color: var(--font-gray);
+}
+
+.course__img {
+  margin: auto;
+  padding-right: 30px;
+}
+.course__svg {
+
+  width: 100px;
+  height: 100px;
 }
 
 .course__title {
