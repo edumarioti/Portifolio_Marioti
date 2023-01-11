@@ -121,11 +121,6 @@
   display: flex;
   padding: 5%;
   justify-content: center;
-  border-radius: 10px 0 0 10px;
-  background-image: url('../img/background.jpg');
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-size: cover; 
 }
 
 .perfil__picture img{
@@ -244,7 +239,6 @@
 .project:hover {
   border: 2px solid var(--green-1);
   box-shadow: 0px 0px 15px var(--green-1);
-
 }
 
 .project {
@@ -376,6 +370,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
 }
 
 .footer__framework_icons {
