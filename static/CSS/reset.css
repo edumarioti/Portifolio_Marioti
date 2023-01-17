@@ -10,7 +10,6 @@
 --green-2: #023535;
 
 --font-emphasis: 16px "Constantia";
---font-regular: 16px  "Lucida Sans";
 --font-white: #ebebeb;
 --font-black: #313133;
 --font-green: #0fc2c0;
@@ -20,9 +19,8 @@
 body {
     background-image: linear-gradient(90deg,  var(--green-2) 20%, var(--black-2) 100%);
     font-family: Roboto, sans-serif;
-    scroll-behavior: smooth;
-    font: var(--font-regular);
     color: var(--font-white);
+    scroll-behavior: smooth;
     display: flex;
     justify-content: center;
     align-items: center;
