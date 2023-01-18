@@ -125,8 +125,8 @@
   width: 100%;
   max-width: 400px;
   max-height: 400px;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 50px;
+  min-height: 50px;
   background-color: var(--green-1);
   border: 5px solid var(--green-1);
   box-shadow: 0px 0px 10px var(--green-1);
@@ -182,33 +182,15 @@
 
 
 @media screen and (max-width: 800px){
-  .content_div {
-    margin: 8% 8%;
-    background-color: var(--black-1);
-    padding: 3%;
-    border-radius: 10px;
-  }
-  .main {
-    padding-top: 3.5em;
-    padding-bottom: 5.5em;  
-  }
 
   .perfil {
     padding: 0;
     display: block;
   }
   
-  .perfil__images {
-    border-radius: 10px 10px 0 0;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-  }
-
-
   .perfil__info {
-    padding: 2%;
-    width: 96%;
+      padding: 2%;
+      width: 96%;
   }
 
 
