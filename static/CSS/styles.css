@@ -317,10 +317,20 @@
   margin: auto;
   padding-right: 30px;
 }
-.course__svg {
 
+.course__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course__svg {
   width: 100px;
   height: 100px;
+}
+
+.course__svg_certificate {
+  width: 40px;
+  height: 40px;
 }
 
 .course__title {
