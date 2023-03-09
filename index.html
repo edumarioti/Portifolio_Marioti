@@ -41,17 +41,17 @@
 
     <div class="sidebar" id="sidebar">
 
-        <button onclick="toggle_sidebar()" class="header__btn_menu">
+        <button class="header__btn_menu toggle_menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="side_bar__button" viewBox="0 0 16 16">
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
             </svg>
         </button>
 
-        <a onclick="toggle_sidebar()" href="#perfil">Perfil</a>
-        <a onclick="toggle_sidebar()" href="#hello">Olá</a>
-        <a onclick="toggle_sidebar()" href="#projects">Projetos</a>
-        <a onclick="toggle_sidebar()" href="#hard_skills">Hard Skills</a>
-        <a onclick="toggle_sidebar()" href="#courses">Cursos</a>
+        <a class="toggle_menu" href="#perfil">Perfil</a>
+        <a class="toggle_menu" href="#hello">Olá</a>
+        <a class="toggle_menu" href="#projects">Projetos</a>
+        <a class="toggle_menu" href="#hard_skills">Hard Skills</a>
+        <a class="toggle_menu" href="#courses">Cursos</a>
     </div>
 
     <main onclick="close_sidebar()" class="main" id="main">
@@ -355,48 +355,7 @@
         </div>
     </footer>
     
-    <script>
-        var header = document.getElementById('header')
-        var sidebar = document.getElementById('sidebar')
-        var main = document.getElementById('main')
-        var show_sidebar = false
-    
-        function toggle_sidebar(){
-    
-            show_sidebar = !show_sidebar;
-    
-            if(show_sidebar)
-            {
-                sidebar.style.left = '0vw';
-                sidebar.style.animationName = 'show_side_bar';
-                main.style.filter = 'blur(2px)';
-    
-            }
-            else
-            {
-                sidebar.style.left = '-100vw';
-                sidebar.style.animationName = 'close_side_bar';
-                main.style.filter = '';
-            }
-        }
-    
-        function close_sidebar(){
-            if(show_sidebar)
-            {
-                show_sidebar = true;
-                toggle_sidebar();
-            }
-        }
-    
-        window.addEventListener('resize', function(event) {
-            if(window.innerWidth> 660 && show_sidebar) 
-            {  
-                show_sidebar = true;
-                toggle_sidebar();
-            }
-        });
-    
-    </script>
+    <script src="static/scripts/sidebar.js"></script>
 </body>
 
 </html>
