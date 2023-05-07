@@ -18,12 +18,16 @@
   
 body {
     background-image: linear-gradient(90deg,  var(--green-2) 20%, var(--black-2) 100%);
+    background-position: center center;
+    background-size: cover cover; 
     font-family: Roboto, sans-serif;
     color: var(--font-white);
     scroll-behavior: smooth;
-    display: flex;
+    display: fixed;
     justify-content: center;
     align-items: center;
+    right: auto;
+    left: auto;
 
 }
 
