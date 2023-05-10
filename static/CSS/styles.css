@@ -219,17 +219,14 @@
   max-width: 200px;
   margin: 10px;
   background-color: var(--black-2);
+  color: var(--font-white);
+  text-decoration: none;
+
 }
 
 .project:hover {
   border: 2px solid var(--green-1);
   box-shadow: 0px 0px 15px var(--green-1);
-}
-
-.project {
-  color: var(--font-white);
-  text-decoration: none;
-  justify-content: end;
 }
 
 .project__image img {
@@ -240,9 +237,9 @@
 
 .project__info {
   position: relative;
-  justify-content: space-evenly;
-  padding: 10px;
+  padding: 1em;
   text-align: center;
+
 }
 
 .project__title {

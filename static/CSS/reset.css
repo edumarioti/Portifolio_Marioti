@@ -8,6 +8,7 @@
 --black-2: #000000;
 --green-1: #0fc2c0;
 --green-2: #023535;
+--green-3: #011414;
 
 --font-emphasis: 16px "Constantia";
 --font-white: #ebebeb;
@@ -17,7 +18,7 @@
 }
   
 body {
-    background-image: linear-gradient(145deg,  var(--green-2) 20%, var(--black-2) 100%);
+    background-image: linear-gradient(145deg,  var(--green-2) 20%,var(--green-3) 100%);
     background-position: center center;
     background-size: cover cover; 
     font-family: Roboto, sans-serif;
